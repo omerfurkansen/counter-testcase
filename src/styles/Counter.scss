@@ -1,0 +1,92 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.CounterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: fadeIn 1s;
+}
+
+.CounterControls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.increment {
+    color: #fff;
+    background-color: #00a8cc;
+
+    &:hover {
+      background-color: #007c99;
+    }
+  }
+
+  &.decrement {
+    color: #fff;
+    background-color: #ef476f;
+
+    &:hover {
+      background-color: #d81e5b;
+    }
+  }
+}
+
+.count {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  border-radius: 50%;
+  padding: 20px;
+  margin: 20px;
+  min-width: 40px;
+  text-align: center;
+
+  &:hover {
+    background-color: #073b4c;
+  }
+}
+
+.title {
+  animation: bounce 1s;
+}
+
+.reset {
+  background-color: #f5f5f5;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
